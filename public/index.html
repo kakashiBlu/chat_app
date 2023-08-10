@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Realtime Chat app</title>
+    
+    <script defer src="/socket.io/socket.io.js"></script>
+    <script defer src="clientSide/client.js"></script>
+</body>
+<!-- <script>
+  var socket = io();
+</script> -->
+    
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <nav>
+        <img src="icons8-chat-64.png" class = "logo" alt="chat Logo">
+        <button class = "btn extremeLeft" id = "discon" type="button" onClick="refreshPage()">DISCONNECT</button>
+        <script>
+            function refreshPage(){
+                window.location.reload();
+            } 
+            </script>
+    </nav>
+    <div class = "container">
+        <!-- <div class = "message left">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad dicta voluptas nemo iure tempora ipsum laborum possimus. Hic ducimus consectetur cumque quod in at, omnis velit fugit est accusantium ut!</div>
+        <div class = "message right">fsdfsfsdf</div> -->
+        <form action = "#" id = "closeChat">
+            <button type = "submit">Close Chat Room</button>
+        </form>
+
+    </div>
+    <div id="snackbar"></div>
+    <form action = "#" id = "sendcontainer">
+
+        <input type="text" name = "messageInp" id = "messageInp" required>
+        <button class = "btn" type = "submit">Send</button>
+
+    </form>
+    
+
+</html>
